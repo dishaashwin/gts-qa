@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "d7fe88b1-dfef-4951-8057-ab94b8916ec9",
+		"name": "GTSChakuriPersonalDetails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegisterbyUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"gts_user_email\" : \"1@gmail.com\",\r\n \"gts_user_password\" : \"44\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/users/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n   \"success\": \"true\",\n   \"message\": \"Account created sucessfully\",\n   \"status_code\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n \"gts_user_email\" : \"ddd.gmail.com\",\r\n \"gts_user_password\" : \"44\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9dd56acc-f628-4b86-9bce-ae0f8a53d02b.mock.pstmn.io/api/v1/users/login",
+					"protocol": "https",
+					"host": [
+						"9dd56acc-f628-4b86-9bce-ae0f8a53d02b",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \r\n \"gts_user_email\" : \"ddd.gmail.com\",\r\n \"gts_user_password\" : \"44\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://9dd56acc-f628-4b86-9bce-ae0f8a53d02b.mock.pstmn.io/api/v1/users/login",
+							"protocol": "https",
+							"host": [
+								"9dd56acc-f628-4b86-9bce-ae0f8a53d02b",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Jul 2020 16:15:50 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1594397810"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=fbf798850151445d"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=deb6cd3f706855ea"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n\"success\": false,\n\"message\": \"Login failed : user ID and password is wrong\",\n\"status_code\": 403\n}\n   "
+				}
+			]
+		},
+		{
+			"name": "User ID does not exist or Invalid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"gts_user_ID\" : \"2\",\r\n \"gts_user_first_name\" : \"john\",\r\n \"gts_user_last_name\" :\"Harry\",\r\n\"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"Brown\",\r\n\"gts_user_father__last_name\": \"Harrison\",\r\n\"gts_user_mother_first_name\": \"Blase\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"8889767758\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108887\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9dd56acc-f628-4b86-9bce-ae0f8a53d02b.mock.pstmn.io/api/v1/users/personaldetails",
+					"protocol": "https",
+					"host": [
+						"9dd56acc-f628-4b86-9bce-ae0f8a53d02b",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personaldetails"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User ID does not exist or Invalid",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"gts_user_ID\" : \"2\",\r\n \"gts_user_first_name\" : \"john\",\r\n \"gts_user_last_name\" :\"Harry\",\r\n\"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"Brown\",\r\n\"gts_user_father__last_name\": \"Harrison\",\r\n\"gts_user_mother_first_name\": \"Blase\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"8889767758\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108887\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://9dd56acc-f628-4b86-9bce-ae0f8a53d02b.mock.pstmn.io/api/v1/users/personaldetails",
+							"protocol": "https",
+							"host": [
+								"9dd56acc-f628-4b86-9bce-ae0f8a53d02b",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"personaldetails"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Jul 2020 05:36:49 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1594618669"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=43c3794f6f1e664a"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=ca89edb19412ce00"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n   \"success\": false,\n   \"message\": \"User id not found\",\n   \"status_code\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List of All users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9dd56acc-f628-4b86-9bce-ae0f8a53d02b.mock.pstmn.io/api/v1/users/personaldetails/1",
+					"protocol": "https",
+					"host": [
+						"9dd56acc-f628-4b86-9bce-ae0f8a53d02b",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personaldetails",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get List of All users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://9dd56acc-f628-4b86-9bce-ae0f8a53d02b.mock.pstmn.io/api/v1/users/personaldetails/1",
+							"protocol": "https",
+							"host": [
+								"9dd56acc-f628-4b86-9bce-ae0f8a53d02b",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"personaldetails",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Jul 2020 05:59:18 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1594620017"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=b0472d8f0a94ac29"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=f18acfc001ba85e4"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n   \"success\": false,\n   \"message\": \"User ID not found\",\n   \"status_code\": 404\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

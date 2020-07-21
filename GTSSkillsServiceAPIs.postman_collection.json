@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "77384f59-bb77-41ac-b310-da082735dfa5",
+		"name": "GTSSkillsServiceAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create skills",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n \"gtsSkillName\" : \"java\",\r\n \"gtsSkillDescription\" :\"java description\",\r\n \"gtsSkillStatus\":false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/skills",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update skills",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"gts_skill_ID\" : \"1\",\r\n \"gts_skill_name\" : \"java\",\r\n \"gts_skill_description\" :\"description\",\r\n \"gts_skill_status\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/skills",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "skill id doesnot exist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"gts_skill_ID\" : \"12\",\r\n \"gts_skill_name\" : \"java\",\r\n \"gts_skill_description\" :\"description\",\r\n \"gts_skill_status\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/skills",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid input",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"gts_skill_ID\" : \"1\",\r\n \"gts_skill_name\" : \" \",\r\n \"gts_skill_description\" :\"description\",\r\n \"gts_skill_status\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/skills",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get skill by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/Skills/skill_id=1",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"Skills",
+						"skill_id=1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "skill id is wrong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/skills/10",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get list of all skills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/skills",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get listof allskills userId wrong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/skills",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search skills using name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/skills/java",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete an skills",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-126-184-129.ap-south-1.compute.amazonaws.com:4737/api/v1/skills/2",
+					"protocol": "http",
+					"host": [
+						"ec2-13-126-184-129",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4737",
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

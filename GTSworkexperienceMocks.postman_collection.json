@@ -1,0 +1,1679 @@
+{
+	"info": {
+		"_postman_id": "cd178009-2a54-44b4-ae61-b31d1655262e",
+		"name": "GTSworkexperienceMocks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1/users/WorkExperience/\nworkexperienceId/{workexperienceId}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/users/WorkExperience/\nworkexperienceId/?workexperienceId=23",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"\nworkexperienceId",
+						""
+					],
+					"query": [
+						{
+							"key": "workexperienceId",
+							"value": "23"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/WorkExperience/\nworkexperienceId/?workexperienceId=23",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"\nworkexperienceId",
+								""
+							],
+							"query": [
+								{
+									"key": "workexperienceId",
+									"value": "23"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n        \"GTS_USER_DESIGNATION\": \"test\",\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"2000,2001,2002\",\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\n        \"GTS_USER_EMPLOYER\": \"GTS\",\n        \"GTS_USER_ID\": 2,\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\n    }"
+				}
+			]
+		},
+		{
+			"name": "workexperience id found for the userd id ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/userId/1",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"userId",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "workexperience id found for the userd id ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/userId/1",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"userId",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 10:37:07 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595327887"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=33f9f031da1a956a"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=bb46332498da6878"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[{\n        \"GTS_USER_DESIGNATION\": \"test\",\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"2000,2001,2002\",\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\n        \"GTS_USER_EMPLOYER\": \"GTS\",\n        \"GTS_USER_ID\": 2,\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\n    },\n    {\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\n        \"GTS_USER_DESIGNATION\": \"company\",\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\n        \"GTS_USER_EMPLOYER\": \"GTS\",\n        \"GTS_USER_ID\": 1,\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\n    }]"
+				}
+			]
+		},
+		{
+			"name": "work experience records not found for the  work experience id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/\nWorkExperience/workExperienceId/23",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"\nWorkExperience",
+						"workExperienceId",
+						"23"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "work experience records not found for the  work experience id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/\nWorkExperience/workExperienceId/23",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"\nWorkExperience",
+								"workExperienceId",
+								"23"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 10:50:02 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595328662"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=59a524cbd8bc60d9"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=cc96104d66068fb3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"false\",\n    \"message\": \"WorkExperience id does not exist\",\n    \"status_code\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "work experience records not found for the particular user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/\nWorkExperience/GTS_USER_ID=8",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"\nWorkExperience",
+						"GTS_USER_ID=8"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "work experience records not found for the particular user id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/\nWorkExperience/GTS_USER_ID=8",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"\nWorkExperience",
+								"GTS_USER_ID=8"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 10:54:16 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595328916"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=4739010a57444e07"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=d129fef9c717bf85"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"false\",\n    \"message\": \"user id does not exist\",\n    \"status_code\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "userid doesnot present in the gtsusertable",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "userid doesnot present in the gtsusertable",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 10:58:18 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595329158"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=1ac0a5aac0e072d4"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=2cea4601a151b075"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{  \n     \"success\": \"false\",\n    \"message\": \"Exception in while updating the  Work Experience\",\n    \"status_code\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "update new work experience",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/GTS_USER_ID=1",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"GTS_USER_ID=1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update new work experience",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/GTS_USER_ID=1",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"GTS_USER_ID=1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 11:10:03 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "117"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595329803"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c9e93db381a10d4a"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=0cca46e1b1487d81"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"updated New Work Experience\",\n    \"success\": \"true\",\n    \"httpStatus\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "if date format is wrong",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"03-30-2020\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/pass",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"pass"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "if date format is wrong",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"03-30-2020\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/pass",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"pass"
+							]
+						}
+					},
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 11:13:26 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595330066"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=255f01992a0b320f"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=44c84396b3dd68ae"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"data format is wrong\",\n    \"timestamp\": \"2020-07-14T04:11:51.843+00:00\",\n    \"path\": \"/api/v1/users/WorkExperience\", \n    \"status\": 400\n}"
+				},
+				{
+					"name": "if date format is wrong",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"03-30-2020\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/pass",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"pass"
+							]
+						}
+					},
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 11:13:26 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595330066"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=255f01992a0b320f"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=44c84396b3dd68ae"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"data format is wrong\",\n    \"timestamp\": \"2020-07-14T04:11:51.843+00:00\",\n    \"path\": \"/api/v1/users/WorkExperience\", \n    \"status\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "added new experience",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"GTS_USER_DESIGNATION\": \"test\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"2000,2001,2002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 2,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "added new experience",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"GTS_USER_DESIGNATION\": \"test\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"2000,2001,2002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 2,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 11:15:52 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595330212"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=d6d2f77cc887d98a"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=98f9463f9de1d58d"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Added New Work Experience\",\n    \"success\": \"true\",\n    \"statusCode\": \"200\"\n}"
+				}
+			]
+		},
+		{
+			"name": "userid doesnot present in the gts usertable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"GTS_USER_DESIGNATION\": \"test\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"2000,2001,2002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 12,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/GTS_USER_ID=12",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"GTS_USER_ID=12"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "userid doesnot present in the gts usertable",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"GTS_USER_DESIGNATION\": \"test\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"2000,2001,2002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 12,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/GTS_USER_ID=12",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"GTS_USER_ID=12"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 11:18:50 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595330360"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=becfddff832baa12"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=a56238703b48a7f4"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Exception while adding New Work Experience\",\n    \"success\": \"false\",\n    \"statusCode\": \"404\"\n}"
+				}
+			]
+		},
+		{
+			"name": "date format is wrong",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"03-30-2020\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/pass",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"pass"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "date format is wrong",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"03-30-2020\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/pass",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"pass"
+							]
+						}
+					},
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 11:22:16 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595330596"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=cc21da213aeaca42"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=59880cb26ae237b4"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2020-07-14T04:11:51.843+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"message\": \"\",\n    \"path\": \"/api/v1/users/WorkExperience\"\n}"
+				}
+			]
+		},
+		{
+			"name": "work experience id found",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/workExperienceId/?workExperienceId=23",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"workExperienceId",
+						""
+					],
+					"query": [
+						{
+							"key": "workExperienceId",
+							"value": "23"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "work experience id found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/workExperienceId/?workExperienceId=23",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"workExperienceId",
+								""
+							],
+							"query": [
+								{
+									"key": "workExperienceId",
+									"value": "23"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 11:24:11 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595330710"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=8476116bb06964dd"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=a650674ac53a36c8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"true\", \n    \"message\": \"Deleted  Work Experience\",\n     \"status_code\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "work experience id doesnot exist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/workExperienceId/fail",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"workExperienceId",
+						"fail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "work experience id doesnot exist",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/workExperienceId/fail",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"workExperienceId",
+								"fail"
+							]
+						}
+					},
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 11:27:58 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595330927"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=3635d394a0178a3b"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=0e177f7b7b5722e3"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Exception while deleting the Work Experience\",\n    \"success\": \"false\",\n    \"statusCode\": \"500\"\n}"
+				}
+			]
+		},
+		{
+			"name": "if the userid is present",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/userId/?GTS_USER_ID=1",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"",
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"userId",
+						""
+					],
+					"query": [
+						{
+							"key": "GTS_USER_ID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "if the userid is present",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io/api/v1/users/WorkExperience/userId/?GTS_USER_ID=1",
+							"protocol": "https",
+							"host": [
+								"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"",
+								"api",
+								"v1",
+								"users",
+								"WorkExperience",
+								"userId",
+								""
+							],
+							"query": [
+								{
+									"key": "GTS_USER_ID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 11:30:35 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595331095"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=2473c45798fa84fe"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=6ed7d4377bff3070"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"true\", \n    \"message\": \"Deleted  Work Experience\",\n     \"status_code\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "if userid doesnot present",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://9aafb9b4-00bd-410f-8d31-2dfce48c7d13.mock.pstmn.io//api/v1/users/WorkExperience/userId/fail",
+					"protocol": "https",
+					"host": [
+						"9aafb9b4-00bd-410f-8d31-2dfce48c7d13",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"",
+						"api",
+						"v1",
+						"users",
+						"WorkExperience",
+						"userId",
+						"fail"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

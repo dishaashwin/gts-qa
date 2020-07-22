@@ -1,0 +1,1649 @@
+{
+	"info": {
+		"_postman_id": "043009f3-233d-4779-a4ef-89ca30f1b739",
+		"name": "GTSSkillsService Mock APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create skills",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n \"gts_skill_name\" : \"java\",\r\n \"gts_skill_description\" :\"java description\",\r\n \"gts_skill_status\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}//api/v1/skills",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"",
+						"api",
+						"v1",
+						"skills"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}//api/v1/skills",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"",
+								"api",
+								"v1",
+								"skills"
+							]
+						}
+					},
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n   \"success\": true,\n   \"message\": \"gts skills details created successfully\",\n   \"status_code\": 201\n}"
+				}
+			]
+		},
+		{
+			"name": "invalid input",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"gts_skill_id\": 1,\r\n        \"gts_skill_name\": \"spring\",\r\n        \"gts_skill_description\": \"spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/gts_skill_id=1",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"gts_skill_id=1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "invalid input",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"gts_skill_id\": 1,\r\n        \"gts_skill_name\": \"spring\",\r\n        \"gts_skill_description\": \"spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/gts_skill_id=1",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								"gts_skill_id=1"
+							]
+						}
+					},
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jul 2020 12:57:58 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"66-ohMicGbdJCjyPEwkf/hR2enTl+8\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595336338"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=95c0a74ba5cd0db3"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=8cc50f97e73e7603"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Skill id found, ID is not required to add the data \",\n    \"status_code\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "invalid input  example 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"gts_skill_name\": \"\",\r\n        \"gts_skill_description\": \"spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/gts_skill_name",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"gts_skill_name"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "invalid input  example 2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"gts_skill_name\": \"\",\r\n        \"gts_skill_description\": \"spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/gts_skill_name",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								"gts_skill_name"
+							]
+						}
+					},
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 14:41:15 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"66-ohMicGbdJCjyPEwkf/hR2enTl+8\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595428934"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=bf37f64850c6cb20"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=274a6d8f412dea20"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Skill Name should not be empty \",\n    \"status_code\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "gts skills updated successfully",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"gts_skill_id\" : \"1\",\r\n \"gts_skill_name\" : \"java\",\r\n \"gts_skill_description\" :\"description\",\r\n \"gts_skill_status\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "gts skills updated successfully",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"gts_skill_id\" : \"1\",\r\n \"gts_skill_name\" : \"java\",\r\n \"gts_skill_description\" :\"description\",\r\n \"gts_skill_status\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 14:44:50 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595429150"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c49e21481e57acb1"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=7cdc867a8461d59b"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Skill updated successfully\",\n    \"status_code\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "skill id doesnot exist or invalid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"gts_skill_id\": 99,\r\n        \"gts_skill_name\": \"updated spring\",\r\n        \"gts_skill_description\": \"updated spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/?gts_skill_id=99",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						""
+					],
+					"query": [
+						{
+							"key": "gts_skill_id",
+							"value": "99"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "skill id doesnot exist or invalid",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"gts_skill_id\": 99,\r\n        \"gts_skill_name\": \"updated spring\",\r\n        \"gts_skill_description\": \"updated spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/?gts_skill_id=99",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								""
+							],
+							"query": [
+								{
+									"key": "gts_skill_id",
+									"value": "99"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 14:48:21 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595429150"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c49e21481e57acb1"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=7cdc867a8461d59b"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Skill Id not found you can't update data \",\n    \"status_code\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "invalid input",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"gts_skill_id\": 1,\r\n        \"gts_skill_name\": \"\",\r\n        \"gts_skill_description\": \"updated spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/?gts_skill_id=1",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						""
+					],
+					"query": [
+						{
+							"key": "gts_skill_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "invalid input",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"gts_skill_id\": 1,\r\n        \"gts_skill_name\": \"\",\r\n        \"gts_skill_description\": \"updated spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/?gts_skill_id=1",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								""
+							],
+							"query": [
+								{
+									"key": "gts_skill_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 14:59:29 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595429150"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c49e21481e57acb1"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=7cdc867a8461d59b"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Skill Name should not be empty \",\n    \"status_code\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "id required",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"gts_skill_name\": \"spring\",\r\n        \"gts_skill_description\": \"spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/id",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"id"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "id required",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"gts_skill_name\": \"spring\",\r\n        \"gts_skill_description\": \"spring Description\",\r\n        \"gts_skill_status\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/id",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								"id"
+							]
+						}
+					},
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 15:05:55 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595430411"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=f90fb8bc64589277"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=18fcb4b52660be07"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Skill id not found, ID is required for update the data \",\n    \"status_code\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "get skill by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/?gts_skill_id=1",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						""
+					],
+					"query": [
+						{
+							"key": "gts_skill_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get skill by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/?gts_skill_id=1",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								""
+							],
+							"query": [
+								{
+									"key": "gts_skill_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 15:08:34 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595430574"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=39873f4b72e74b57"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=df6f95a93acae306"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gts_skill_id\": 1,\n    \"gts_skill_name\": \"updated spring\",\n    \"gts_skill_description\": \"updated spring Description\",\n    \"gts_skill_status\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "skill id is wrong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/gts_skill_id=22",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"gts_skill_id=22"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "skill id is wrong",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/gts_skill_id=22",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								"gts_skill_id=22"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 15:11:58 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "117"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595430750"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=1aa31bc28f8b1804"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=738df3583657dba5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Skill Id not found \",\n    \"status_code\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List of All Skills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/gts_list_skills",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"gts_list_skills"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get List of All Skills",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/gts_list_skills",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								"gts_list_skills"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 15:15:34 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595430984"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=67b6035b07ae7a78"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=f3b25baed4be7ec1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"gts_skill_id\": 1,\n        \"gts_skill_name\": \"updated spring\",\n        \"gts_skill_description\": \"updated spring Description\",\n        \"gts_skill_status\": false\n    },\n    {\n        \"gts_skill_id\": 2,\n        \"gts_skill_name\": \"java\",\n        \"gts_skill_description\": \"java Description\",\n        \"gts_skill_status\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "skill name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/java",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"java"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "skill name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/java",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								"java"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 15:21:37 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595431357"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=97a3b7a544cc3ebd"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=e6eccae439359136"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"gts_skill_id\": 2,\n        \"gts_skill_name\": \"java\",\n        \"gts_skill_description\": \"java Description\",\n        \"gts_skill_status\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "skill name not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/python",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"python"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "skill name not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/python",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								"python"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 15:25:21 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595431580"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=b0f8bc2657322a27"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=6b044da4f7cac7bc"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Skill Name not found \",\n    \"status_code\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "delete an skills",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/1",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete an skills",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/1",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 15:27:14 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "117"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595431684"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=f22b6370ee844495"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=4a34edcffeb291a6"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Skill deleted successfully\",\n    \"status_code\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "skill id not found",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/passed",
+					"protocol": "https",
+					"host": [
+						"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"skills",
+						"passed"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "skill id not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://e8e01024-2e50-42df-ae81-a3b3e5c4c468.mock.pstmn.io/api/v1/skills/passed",
+							"protocol": "https",
+							"host": [
+								"e8e01024-2e50-42df-ae81-a3b3e5c4c468",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"skills",
+								"passed"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jul 2020 15:28:52 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1595431776"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=524370af28d44f0a"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=7b1202fd5ee93835"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Skill id not found \",\n    \"status_code\": 404\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,1498 @@
+{
+	"info": {
+		"_postman_id": "592535c4-4a88-4941-a63d-7f78eddd28a2",
+		"name": "Mock-GTS IdentityServicesRoles,Permission",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_role_name\":\"GTS_EMPLOYER\",\r\n\"gts_role_status\":\"true\",\r\n\"gts_role_description\":\"Provide training,instruction,supervision for employees\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/master_data/role",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"role"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/master_data/role",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"role"
+							]
+						}
+					},
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n   \"success\": \"true\",\n   \"message\": \"Role is created  sucessfully \",\n   \"status_code\": 201\n}"
+				}
+			]
+		},
+		{
+			"name": "Update role",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_role_ID\":\"2\",\r\n\"gts_role_name\":\"GTS_TRAINER\",\r\n\"gts_role_status\":\"true\",\r\n\"gts_role_description\":\"Provide training,instruction,supervision for employees\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/master_data/role",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"role"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/master_data/role",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"role"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n   \"success\": \"true\",\n   \"message\": \"Role is updated  sucessfully \",\n   \"status_code\": 201\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrive role by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gts_role_id\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/role/2",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"role",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retrive role",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/role/2",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"role",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jul 2020 06:18:20 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1594707560"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=962753c06796e13a"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=71b909547954b5cc"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n\"gts_role_ID\":\"2\",\n\"gts_role_name\":\"GTS_EMPLOYER\",\n\"gts_role_status\":\"true\",\n\"gts_role_description\":\"Provide training,instruction,supervision for employees\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrive all role created",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/role/1,2,3",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"role",
+						"1,2,3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retrive all role",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/role/1,2,3",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"role",
+								"1,2,3"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jul 2020 06:23:50 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1594707875"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=99d226f4e722ce52"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=9ac766e2d531ceaa"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n{\n\"gts_role_ID\":\"1\",\n\"gts_role_name\":\"GTS_JOB_SEEKER\",\n\"gts_role_status\":\"true\",\n\"gts_role_description\":\"An individual who is actively looking for an employment opportunity\"\n},\n{\n\"gts_role_ID\":\"2\",\n\"gts_role_name\":\"GTS_EMPLOYER\",\n\"gts_role_status\":\"true\",\n\"gts_role_description\":\"Provide training,instruction,supervision for employees\"\n},\n{\n\"gts_role_ID\":\"3\",\n\"gts_role_name\":\"GTS_RECRUITER\",\n\"gts_role_status\":\"true\",\n\"gts_role_description\":\"Reviewing candidate's job experience,negotiating  salaries and placing candidates in agreeable employment positions\"\n}\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete role",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_role_id\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/master_data/role/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"role",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/master_data/role/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"role",
+								"2"
+							]
+						}
+					},
+					"code": 410,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n   \"success\": \"true\",\n   \"message\": \"Data deleted sucessfully\",\n   \"status_code\": 410\n}"
+				}
+			]
+		},
+		{
+			"name": "Assign role to user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"gts_user_id\" : \"2\",\r\n\"roles\" : \"7\",\r\n\"primary_role_id\" :  \"7\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/users/role",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"role"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"gts_user_id\" : \"2\",\r\n\"roles\" : \"7\",\r\n\"primary_role_id\" :  \"7\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/role",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"role"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"success\": \"true\",\n    \"message\": \"Role is updated to an User \",\n    \"status_code\": \"200\"\n}"
+				}
+			]
+		},
+		{
+			"name": " Assign multiple role to single user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"gts_user_id\" : \"2\",\r\n\"roles\" : \"7,8\",\r\n\"primary_role_id\" : \"7\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/users/role",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"role"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"gts_user_id\" : \"2\",\r\n\"roles\" : \"7,8\",\r\n\"primary_role_id\" : \"7\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/role",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"role"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n\"success\": \"true\",\n\"message\": \"Role is updated to an User \",\n\"status_code\": \"200\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all roles from user-roles table with user ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"gts_user_id\": 4\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/users/role/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"role",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all roles from user-roles table with user ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"gts_user_id\": 4\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/role/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"role",
+								"4"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Jul 2020 16:51:33 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596041517"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=8118f9c327545c87"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=1cd6c9bfa2e5d25e"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gts_user_id\": 4,\n    \"roles\": \"2,3\",\n    \"primary_role_id\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "create permission",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"GTS_PERMISSION_NAME\":\"Can_Post_Job\",\r\n\"GTS_PERMISSION_STATUS\":\"full_access\",\r\n\"GTS_PERMISSION_DESCRIPTION\":\"Users can post jobs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission\n",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"permission\n"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/master_data/permission",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"GTS_PERMISSION_NAME\":\"Can_Post_Job\",\r\n\"GTS_PERMISSION_STATUS\":\"full_access\",\r\n\"GTS_PERMISSION_DESCRIPTION\":\"Users can post jobs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission\n\n",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"permission\n\n"
+							]
+						}
+					},
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n   \"success\": \"true\",\r\n   \"message\": \"Permission created \",\r\n   \"status_code\": 201\r\n}"
+				}
+			]
+		},
+		{
+			"name": "permission updated",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"GTS_PERMISSION_ID\":\"1\",\r\n\"GTS_PERMISSION_NAME\":\"CAN_SEARCH_JOB\",\r\n\"GTS_PERMISSION_STATUS\":\"true\",\r\n\"GTS_PERMISSION_DESCRIPTION\":\"The process of looking for employement\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"permission"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/master_data/permission",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"GTS_PERMISSION_ID\":\"1\",\r\n\"GTS_PERMISSION_NAME\":\"CAN_SEARCH_JOB\",\r\n\"GTS_PERMISSION_STATUS\":\"true\",\r\n\"GTS_PERMISSION_DESCRIPTION\":\"The process of looking for employement\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission\n",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"permission\n"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n   \"success\": \"true\",\r\n   \"message\": \"Data updated sucessfully\",\r\n   \"status_code\": 200\r\n}"
+				}
+			]
+		},
+		{
+			"name": "show permission_created",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gts_permission_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission/1",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"permission",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/master_data/permission/1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission/1\n",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"permission",
+								"1\n"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"GTS_PERMISSION_ID\": \"1\",\n    \"GTS_PERMISSION_NAME\": \"Can_Post_Job\",\n    \"GTS_PERMISSION_STATUS\": \"true\",\n    \"GTS_PERMISSION_DESCRIPTION\": \"Users can post jobs,and also can view the Job Postings Status \"\n}"
+				}
+			]
+		},
+		{
+			"name": "show all permission_created",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission/1,2,3",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"permission",
+						"1,2,3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/api/v1/master_data/permission/1,2,3",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission/1,2,3\n",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"permission",
+								"1,2,3\n"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\r\n{\r\n\"GTS_PERMISSION_ID\":\"1\",\r\n\"GTS_PERMISSION_NAME\":\"CAN_SEARCH_JOB\",\r\n\"GTS_PERMISSION_STATUS\":\"true\",\r\n\"GTS_PERMISSION_DESCRIPTION\":\"The process of looking for employement\"\r\n},\r\n{\r\n\"GTS_PERMISSION_ID\":\"2\",\r\n\"GTS_PERMISSION_NAME\":\"CAN_APPLY_FOR_JOB\",\r\n\"GTS_PERMISSION_STATUS\":\"true\",\r\n\"GTS_PERMISSION_DESCRIPTION\":\"The process of trying to find a job\"\r\n},\r\n{\r\n\"GTS_PERMISSION_ID\":\"3\",\r\n\"GTS_PERMISSION_NAME\":\"CAN_APPLY_FOR_TRAINING\",\r\n\"GTS_PERMISSION_STATUS\":\"true\",\r\n\"GTS_PERMISSION_DESCRIPTION\":\"The process of applying  for  training to perform a particular job\"\r\n}\r\n]"
+				}
+			]
+		},
+		{
+			"name": "delete permission",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_permission_id\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission/1",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"master_data",
+						"permission",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/api/v1/master_data/permission/1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"GTS_PERMISSION_ID\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/master_data/permission/1",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"master_data",
+								"permission",
+								"1"
+							]
+						}
+					},
+					"code": 410,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"success\": \"true\",\n    \"message\": \"Permission deleted sucessfully\",\n    \"status_code\": 410\n}"
+				}
+			]
+		},
+		{
+			"name": "Assign  permission",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_role_id\":\"3\",\r\n\"permissions\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"role_permission_map"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/api/v1/role_permission_map",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"gts_role_id\":\"3\",\r\n\"permissions\":\"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"role_permission_map"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n   \"success\": \"true\",\r\n  \"message\": \"Permission is assigned sucessfully\",\r\n  \"status_code\": 200\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Assign multiple permission to single role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_role_id\":\"3\",\r\n\"permissions\":\"3,4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"role_permission_map"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/v1/role_permission_map",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"gts_role_id\":\"3\",\r\n\"permissions\":\"3,4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"role_permission_map"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "\r\n{\r\n   \"success\": \"true\",\r\n  \"message\": \"Permission is assigned sucessfully\",\r\n  \"status_code\": 200\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete  permission assigned by RoleId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_role_id\":\"3\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map/3",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"role_permission_map",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "role_permission_map/6",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map/3",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"role_permission_map",
+								"3"
+							]
+						}
+					},
+					"code": 410,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"success\": \"true\",\r\n    \"message\": \"User-Role mapping is deleted successfully\",\r\n    \"status_code\": \"200\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Update permission",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_role_id\":\"3\",\r\n\"permissions\":\"4,5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission-map",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"role_permission-map"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update permission",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"gts_role_id\":\"3\",\r\n\"permissions\":\"4,5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission-map",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"role_permission-map"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"success\": \"true\",\r\n    \"message\": \"permission is added to Role\",\r\n    \"status_code\": \"200\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "get list of roles,permission assigned",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"role_permission_map"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get list of roles,permission assigned",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"role_permission_map"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n\"gts_role_permission_map_id\":\"6\",\r\n\"gts_role_id\":\"3\",\r\n\"permissions\":\"3,4\"\r\n}\r\n{\r\n\"gts_role_permission_map_id\":\"7\",\r\n\"gts_role_id\":\"4\",\r\n\"permissions\":\"3,4\"\r\n}\r\n{\r\n\"gts_role_permission_map_id\":\"8\",\r\n\"gts_role_id\":\"5\",\r\n\"permissions\":\"5,4\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete with role permission map Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_role_permission_map_id\":\"6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map/role_permission_mapID",
+					"protocol": "https",
+					"host": [
+						"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"role_permission_map",
+						"role_permission_mapID"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete with role permission map Id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"gts_role_permission_map_id\":\"6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io/api/v1/role_permission_map/role_permission_mapID",
+							"protocol": "https",
+							"host": [
+								"af96c46d-9696-40d3-8ff1-4a5f0776830e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"role_permission_map",
+								"role_permission_mapID"
+							]
+						}
+					},
+					"code": 410,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"success\": \"true\",\n    \"message\": \"Assigned permission has been deleted sucessfully\",\n    \"status_code\": 410\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8a7b0406-2bc5-4e25-a178-1cdb78e6095c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2496d77d-0b9e-4850-a99d-7268a1725f4c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "fcba6e2b-e570-4595-b62c-ecb19d87ee10",
+			"key": "url",
+			"value": "https://af96c46d-9696-40d3-8ff1-4a5f0776830e.mock.pstmn.io"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -3,7 +3,7 @@
 		"_postman_id": "81c634da-567f-4541-8241-5f481f46158c",
 		"name": "AWS-GTSIdentityServices",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
+	  },
 	"item": [
 		{
 			"name": "Authentication",

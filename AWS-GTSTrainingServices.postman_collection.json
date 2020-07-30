@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "07df7904-8c83-4637-86e8-484ba1905364",
+		"name": "AWS-GTSTrainingServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Trainings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n \"gts_training_name\" : \"java\",\r\n \"gts_training_description\" :\"java description\",\r\n \"gts_training_status\":true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create trainings with  invalid input",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n \"gts_training_name\" : \" \",\r\n \"gts_training_description\" :\"java description\",\r\n \"gts_training_status\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update training",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_training_id\":1, \r\n \"gts_training_name\" : \"sql\",\r\n \"gts_training_description\" :\"java description\",\r\n \"gts_training_status\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Training with ID not found",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_training_id\":23, \r\n \"gts_training_name\" : \"java\",\r\n \"gts_training_description\" :\"java description\",\r\n \"gts_training_status\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update training with invalid input",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_training_id\":1, \r\n \"gts_training_name\" : \" \",\r\n \"gts_training_description\" :\"java description\",\r\n \"gts_training_status\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update training without training ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n \"gts_training_name\" : \"java\",\r\n \"gts_training_description\" :\"java description\",\r\n \"gts_training_status\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get training by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/17",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Training ID  is wrong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/30",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List of All Trainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List of All active Trainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List of All Inactive Trainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search training using training name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/name/java",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"name",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search training when training Name not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/name/C",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"name",
+						"C"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an Training",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/18",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete trainings when ID is wrong",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-232-152-69.ap-south-1.compute.amazonaws.com:4712/api/v1/trainings/3000",
+					"protocol": "http",
+					"host": [
+						"ec2-13-232-152-69",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4712",
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"3000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an training when resource not found",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-232-152-69.ap-south-1.compute.amazonaws.com:4712/api/v1/trainings/19",
+					"protocol": "http",
+					"host": [
+						"ec2-13-232-152-69",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "4712",
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"19"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4412bfae-69f9-4bf3-a907-369f23d8f419",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fd1b6512-48e6-4cca-917e-876b5d3a43f7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7761f3ca-5bb3-4f64-9869-3494236fbd35",
+			"key": "Base_URL",
+			"value": "http://ec2-13-232-152-69.ap-south-1.compute.amazonaws.com:4712"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

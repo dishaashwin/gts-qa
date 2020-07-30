@@ -1,0 +1,25 @@
+name: Newman-Identity-Service-Run
+
+on:
+  push:
+   branches:
+     - master
+   paths:
+      - 'AWS-GTSIdentityServices.postman_collection.json'
+           
+
+jobs:
+  newman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+          #collection: postman-collection.json
+      - run: npm install -g newman
+      - run: newman run AWS-GTSIdentityServices.postman_collection.json -k
+
+ 
+ 
+

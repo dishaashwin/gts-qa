@@ -1,4 +1,4 @@
-name: Newman-Identity-Service-Run
+name: Newman-Training-Service-Run
 
 on:
   push:

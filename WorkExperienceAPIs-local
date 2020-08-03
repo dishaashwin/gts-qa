@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "b354683f-dc17-405a-ac1b-a70216e5f693",
+		"name": "WorkexperienceAPIs-local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "posting the work experience",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"GTS_USER_DESIGNATION\": \"test\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"2000,2001,2002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 2,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No Work Experience for the particular WorkExperienceId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workExperienceId\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience/work_experience_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience",
+						"work_experience_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "work experience found for the work experience id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workExperienceId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience/work_experience_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience",
+						"work_experience_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "work experience record not found for user id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience/user_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience",
+						"user_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "work experience record found for the userId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience/user_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience",
+						"user_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updated the work experience",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"2021-03-30\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user id doesnot present in the gtsuser table",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "if data format is wrong",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"03-30-2020\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "if the userid doesnot present in the gts user table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "if data format is wrong",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"GTS_USER_WORK_EXPERIENCE_ID\": 12,\r\n        \"GTS_USER_DESIGNATION\": \"company\",\r\n        \"GTS_USER_PROJECT_SKILL_IDS\": \"1000,1001,1002\",\r\n        \"GTS_USER_WORK_START_MONTH_YEAR\":\"2020-03-30\",\r\n        \"GTS_USER_WORK_END_MONTH_YEAR\":\"03-30-2020\",\r\n        \"GTS_USER_EMPLOYER\": \"GTS\",\r\n        \"GTS_USER_ID\": 1,\r\n        \"GTS_USER_JOB_DESCRIPTION\": \"TEST\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "if the work experience id found",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workExperienceId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience/work_experience_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience",
+						"work_experience_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "if the work experience id doesnot found",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workExperienceId\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience/work_experience_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience",
+						"work_experience_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "if the user id doesnot present",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience/user_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience",
+						"user_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "if the user id present",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4736/api/v1/user/work_experience/user_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4736",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"work_experience",
+						"user_id"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "93c50c34-45a5-4869-9918-b213286c62a3",
+		"name": "GTSPersonalDetails_Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create personal details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"users\" : 1,\r\n \"gts_user_first_name\" : \"joe\",\r\n \"gts_user_last_name\" :\"Harrison\",\r\n \"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"Brown\",\r\n\"gts_user_father__last_name\": \"Harrison\",\r\n\"gts_user_mother_first_name\": \"Blase\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"1234567888\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108888\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create personal details with Inactive users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"users\" : 3,\r\n \"gts_user_first_name\" : \"joe\",\r\n \"gts_user_last_name\" :\"Harrison\",\r\n \"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"Brown\",\r\n\"gts_user_father__last_name\": \"Harrison\",\r\n\"gts_user_mother_first_name\": \"Blase\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"1234567888\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108888\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create personal details when user ID not found",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"users\" : 40,\r\n \"gts_user_first_name\" : \"joe\",\r\n \"gts_user_last_name\" :\"Harrison\",\r\n \"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"Brown\",\r\n\"gts_user_father_last_name\": \"Harrison\",\r\n\"gts_user_mother_first_name\": \"Blase\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"1234567888\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108888\",\r\n\"gts_user_is_primary_number_validated\": \"yes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update personal details by user ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"users\" : 2,\r\n \"gts_user_first_name\" : \"john\",\r\n \"gts_user_last_name\" :\"Harry\",\r\n\"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"Brown\",\r\n\"gts_user_father__last_name\": \"Harrison\",\r\n\"gts_user_mother_first_name\": \"Blase\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"8889767758\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108887\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User ID does not exit or not found",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"users\" : \"9\",\r\n \"gts_user_first_name\" : \"jo\",\r\n \"gts_user_last_name\" :\"Harry\",\r\n\"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"Brand\",\r\n\"gts_user_father__last_name\": \"Harrison\",\r\n\"gts_user_mother_first_name\": \"Blase\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"8889767758\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108887\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update personal details by personal details ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"gts_user_personal_detail_id\": 13,\r\n \"gts_user_first_name\" : \"joyy\",\r\n \"gts_user_last_name\" :\"Harry\",\r\n\"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"shadow\",\r\n\"gts_user_father__last_name\": \"Harry\",\r\n\"gts_user_mother_first_name\": \"Teddy\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"8889767758\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108887\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/personal_id",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"personal_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update personal details when personal details ID  not found or Invalid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"gts_user_personal_detail_id\": 40,\r\n \"gts_user_first_name\" : \"j\",\r\n \"gts_user_last_name\" :\"H\",\r\n\"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"shadow\",\r\n\"gts_user_father__last_name\": \"H\",\r\n\"gts_user_mother_first_name\": \"T\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"8889767758\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108887\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/personal_id",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"personal_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update personal details by user ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"users\" : \"2\",\r\n \"gts_user_first_name\" : \"  \",\r\n \"gts_user_last_name\" :\"  \",\r\n\"gts_user_gender\":\"Male\",\r\n\"gts_user_father_first_name\": \"B\",\r\n\"gts_user_father__last_name\": \"Harrison\",\r\n\"gts_user_mother_first_name\": \"Blase\",\r\n\"gts_user_mother_last_name\":  \"Lisa\",\r\n\"gts_user_nationality\": \"Indian\",\r\n\"gts_user_primary_mobile_number\":\"8889767758\",\r\n\"gts_user_alternate_email_id\": \"bbb@gmail.com\",\r\n\"gts_user_alternate_mobile_number\":\"7349108887\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user when user ID  is wrong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/9",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List of All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search user using contact number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/mobile/1234567888",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"mobile",
+						"1234567888"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search user using first name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/first_name/joe",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"first_name",
+						"joe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search user using last name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/last_name/Harrison",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"last_name",
+						"Harrison"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an User using user ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/4",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an User using personal details ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/12",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an User who has  been  aldready removed",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/users/personal_details/4",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"personal_details",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "01c00a27-1718-41af-855b-ce78217e8142",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "87687257-f058-411f-8d1e-d6731469f527",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "ee31f13c-3c68-4d1a-bc73-423db144f355",
+			"key": "URL",
+			"value": "http://localhost:4712"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

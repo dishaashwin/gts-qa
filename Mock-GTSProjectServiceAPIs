@@ -1,0 +1,1501 @@
+{
+	"info": {
+		"_postman_id": "835988b2-3b44-4196-b861-f11eba193bdb",
+		"name": "Mock-GTSProjectServiceAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1/user/project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"partTime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"partTime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"message\": \"user project is created sucessfully\",\n    \"success\": \"true\",\n    \"status_code\": 201\n  }\n"
+				}
+			]
+		},
+		{
+			"name": "userId doesnot exist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"partTime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/user_id=5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"user_id=5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "userId doesnot exist",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"partTime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/user_id=5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"user_id=5"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"message\": \"Exception while adding New Project\",\r\n    \"success\": \"false\",\r\n    \"statusCode\": 500\r\n}"
+				}
+			]
+		},
+		{
+			"name": "user project updated",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gts_user_project_id\":\"1\",\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"fulltime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user project updated",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gts_user_project_id\":\"1\",\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"fulltime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 05:46:58 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596520077"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=33bbbd4a0694b760"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=786139ecc424fb99"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{  \"message\": \"gts user skill updated successfully\",\n    \"success\": \"true\",  \n  \"status_code\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "userId doesnot exist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gts_user_project_id\":\"1\",\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"fulltime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/user_id=4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"user_id=4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "userId doesnot exist",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gts_user_project_id\":\"1\",\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"fulltime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/user_id=4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"user_id=4"
+							]
+						}
+					},
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 05:49:20 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596520188"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=e03ff365797e7987"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=790d7e0d25caff95"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"exception while updating the Project\",\n    \"success\": \"false\",\n    \"statusCode\": 500\n}"
+				}
+			]
+		},
+		{
+			"name": "projectId doesnot exist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gts_user_project_id\":\"7\",\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"fulltime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/project_id=7",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"project_id=7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "projectId doesnot exist",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gts_user_project_id\":\"7\",\r\n    \"gts_user_employer_name\": \"GTS\",\r\n    \"gts_user_employment_type\": \"fulltime\",\r\n    \"gts_user_project_skill_ids\": \"1,2,3\",\r\n    \"gts_user_role_description\": \"role is complicated to do \",\r\n    \"gts_user_role\": \"pyton developer\",\r\n    \"gts_user_project_start_date\": \"2020-03-03\",\r\n    \"gts_user_project_end_date\": \"2021-03-03\",\r\n    \"gts_user_project_site\": \"on-site\",\r\n    \"gts_user_client\": \"XYZ\",\r\n    \"gts_user_project_description\": \"too much description\",\r\n    \"gts_user_designation\": \"Python Developer\",\r\n    \"gts_user_project_location\": \"Mumbai,India\",\r\n    \"gts_user_team_size\": \"12\",\r\n    \"gts_user_id\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/project_id=7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"project_id=7"
+							]
+						}
+					},
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 05:51:52 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596520372"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=e29990d87a5e2d62"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=c3fbdc542ec66dd7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"exception while updating the Project\",\n    \"success\": \"false\",\n    \"statusCode\": 500\n}"
+				}
+			]
+		},
+		{
+			"name": "get by projectId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"projectId\":\"9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/project_id=9",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"project_id=9"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get by projectId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectId\":\"9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/project_id=9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"project_id=9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 05:55:08 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596520567"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=47bb7cc52718e9d1"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=1e5a662457366df0"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"gts_user_project_id\": 9,\n    \"gts_user_employer_name\": \"GTS\",\n    \"gts_user_employment_type\": \"partTime\",\n    \"gts_user_project_skill_ids\": \"1,2,3\",\n    \"gts_user_role_description\": \"role is complicated to do \",\n    \"gts_user_role\": \"pyton developer\",\n    \"gts_user_project_start_date\": \"2020-03-03\",\n    \"gts_user_project_end_date\": \"2021-03-03\",\n    \"gts_user_project_site\": \"on-site\",\n    \"gts_user_client\": \"XYZ\",\n    \"gts_user_project_description\": \"too much description\",\n    \"gts_user_designation\": \"Python Developer\",\n    \"gts_user_project_location\": \"Mumbai,India\",\n    \"gts_user_team_size\": 12,\n    \"gts_user_id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "data fetched successfully",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/user_id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"user_id"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "data fetched successfully",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/user_id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"user_id"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 05:58:40 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596520779"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=b4cac0298e97e307"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=cfc0aba12a9c2a42"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"gts_user_project_id\": 9,\n        \"gts_user_employer_name\": \"GTS\",\n        \"gts_user_employment_type\": \"partTime\",\n        \"gts_user_project_skill_ids\": \"1,2,3\",\n        \"gts_user_role_description\": \"role is complicated to do \",\n        \"gts_user_role\": \"pyton developer\",\n        \"gts_user_project_start_date\": \"2020-03-03\",\n        \"gts_user_project_end_date\": \"2021-03-03\",\n        \"gts_user_project_site\": \"on-site\",\n        \"gts_user_client\": \"XYZ\",\n        \"gts_user_project_description\": \"too much description\",\n        \"gts_user_designation\": \"Python Developer\",\n        \"gts_user_project_location\": \"Mumbai,India\",\n        \"gts_user_team_size\": 12,\n        \"gts_user_id\": 1\n    },\n    {\n        \"gts_user_project_id\": 11,\n        \"gts_user_employer_name\": \"GTS\",\n        \"gts_user_employment_type\": \"fulltime\",\n        \"gts_user_project_skill_ids\": \"1,2,3\",\n        \"gts_user_role_description\": \"role is complicated to do \",\n        \"gts_user_role\": \"pyton developer\",\n        \"gts_user_project_start_date\": \"2020-03-03\",\n        \"gts_user_project_end_date\": \"2021-03-03\",\n        \"gts_user_project_site\": \"on-site\",\n        \"gts_user_client\": \"XYZ\",\n        \"gts_user_project_description\": \"too much description\",\n        \"gts_user_designation\": \"Python Developer\",\n        \"gts_user_project_location\": \"Mumbai,India\",\n        \"gts_user_team_size\": 12,\n        \"gts_user_id\": 1\n    },\n    {\n        \"gts_user_project_id\": 14,\n        \"gts_user_employer_name\": \"GTS\",\n        \"gts_user_employment_type\": \"fulltime\",\n        \"gts_user_project_skill_ids\": \"1,2,3\",\n        \"gts_user_role_description\": \"role is complicated to do \",\n        \"gts_user_role\": \"pyton developer\",\n        \"gts_user_project_start_date\": \"2020-03-03\",\n        \"gts_user_project_end_date\": \"2021-03-03\",\n        \"gts_user_project_site\": \"on-site\",\n        \"gts_user_client\": \"XYZ\",\n        \"gts_user_project_description\": \"too much description\",\n        \"gts_user_designation\": \"Python Developer\",\n        \"gts_user_project_location\": \"Mumbai,India\",\n        \"gts_user_team_size\": 12,\n        \"gts_user_id\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "doesnot exist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"projectId\":\"15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/15",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"15"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "doesnot exist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectId\":\"15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/15",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"15"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 06:07:58 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "116"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596521284"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=b5f447df3890af43"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=94c631a2a99c6323"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No Project for the particular projectId\",\n    \"success\": \"false\",\n    \"statusCode\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "user id not found",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_id\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/userid=5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"userid=5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user id not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"user_id\":\"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/userid=5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"userid=5"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 06:10:53 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "117"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596521484"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c7e65cf0d5cd9151"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=9791d98469543cae"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "Close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No Projects for the particular UserId\",\n    \"success\": \"false\",\n    \"statusCode\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "data deleted successfully",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":\"2\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/user_id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"user_id"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "data deleted successfully",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"userId\":\"2\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/user_id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"user_id"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 06:13:47 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596521687"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=0de617a8243e0403"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=25c2083467bb194d"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{ \"message\": \"Gts User project deleted successfully\",\n    \"success\": true,\n    \"status_code\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "gts user Id is wrong",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"10\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/user_id=10",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"user_id=10"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "gts user Id is wrong",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"10\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/user_id=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"user_id=10"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 06:15:50 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596521809"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=49e06504fc1fcd3e"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=bf6aefef5ce94f90"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Project doesnot exist for the UserId\",\n    \"success\": \"false\",\n    \"statusCode\": 404\n}"
+				}
+			]
+		},
+		{
+			"name": "data deleted successfully",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"projectId\":\"11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/project_id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"project_id"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "data deleted successfully",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectId\":\"11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/project_id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"project_id"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 06:17:49 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596521924"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=d23a1fb734a532c6"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=15b5aac9e486b527"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n     \"message\": \"Gts User Project deleted successfully\",\n     \"success\": true,\n     \"status_code\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "project Id is wrong",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"projectId\":\"12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/project/project_id=12",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"project",
+						"project_id=12"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "project Id is wrong",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectId\":\"12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/user/project/project_id=12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"project",
+								"project_id=12"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 Aug 2020 06:19:45 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1596522040"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=50ec51ca706162a4"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=71bdf70737b8f623"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Exception while deleting the Project\",\n    \"success\": \"false\",\n    \"statusCode\": 500\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

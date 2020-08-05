@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "06c5f913-fdf3-404a-ab05-5afd0f65ab4f",
+		"name": "GTSTrainingService_AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Trainings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n \"gts_training_name\" : \"MY SQL\",\r\n \"gts_training_description\" :\"MY SQL description\",\r\n \"gts_training_status\":true,\r\n  \"gts_training_fees\":2020,\r\n  \"gts_training_fees_currency\":\"Rupees\",\r\n \"gts_training_duration\":\"150 hours\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create trainings with  invalid input",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n \"gts_training_name\" : \"\",\r\n \"gts_training_description\" :\"java description\",\r\n \"gts_training_status\":true,\r\n \"gts_training_fees\":2020,\r\n  \"gts_training_fees_currency\":\"Rupees\",\r\n \"gts_training_duration\":\"150 hours\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update training",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_training_id\":1, \r\n \"gts_training_name\" : \"SQL\",\r\n \"gts_training_description\" :\"SQL description\",\r\n \"gts_training_status\":true,\r\n \"gts_training_fees\":2020,\r\n\"gts_training_fees_currency\":\"Rupees\",\r\n \"gts_training_duration\":\"150 hours\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Training with ID not found",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_training_id\":20, \r\n \"gts_training_name\" : \"java\",\r\n \"gts_training_description\" :\"java description\",\r\n \"gts_training_status\":true,\r\n  \"gts_training_fees\":2020,\r\n\"gts_training_fees_currency\":\"Rupees\",\r\n \"gts_training_duration\":\"150 hours\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update training with invalid input",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gts_training_id\":2, \r\n \"gts_training_name\" : \"\",\r\n \"gts_training_description\" :\"java description\",\r\n \"gts_training_status\":false,\r\n\"gts_training_fees\":2020,\r\n \"gts_training_fees_currency\":\"Rupees\",\r\n \"gts_training_duration\":\"150 hours\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update training without training ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n \"gts_training_name\" : \"java\",\r\n \"gts_training_description\" :\"java description\",\r\n  \"gts_training_fees_currency\":\"Rupees\",\r\n \"gts_training_status\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get training by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/1",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Training ID  is wrong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/30",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List of All Trainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List of All active Trainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/status/true",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"status",
+						"true"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List of All Inactive Trainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/status/false",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"status",
+						"false"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search training using training name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/name/java",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"name",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search training when training Name not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/name/C",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"name",
+						"C"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an Training",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/5",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete trainings when ID is wrong",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/3000",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"3000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an training when resource not found",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/v1/trainings/3",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"trainings",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4459c60b-d073-42ce-8c04-394d6d9c254f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "96269199-7020-484e-a42d-8f95162156d2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "cc2bb3f0-cffd-443d-b51c-96015baa64eb",
+			"key": "Base_URL",
+			"value": "http://ec2-13-232-152-69.ap-south-1.compute.amazonaws.com:4712"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
